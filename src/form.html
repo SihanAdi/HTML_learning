@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--
+隐藏域 hidden
+只读readonly
+禁用disabled
+-->
+<!--
+表单验证；
+placeholder 提示信息'
+required 非空判断
+pattern 正则表达式
+-->
+<!--
+action:提交位置
+method：提交方式 post get
+post：更安全，可以传输大文件
+get：url会显示用户名和密码，高效
+-->
+<form action="image.html" method="get">
+    <p>
+<!--
+maxlength=最大输入长度
+value=默认初始值
+size=文本框长度
+-->
+        姓名:<input type="text" name="username" maxlength="7" value="adsh" size="10" readonly>
+        <br>
+        姓名:<input type="text" name="username" maxlength="7" placeholder="请输入用户名" size="10" >
+    </p>
+    <p>
+        密码: <input type="password" name="pwd" hidden>
+        <br>
+        密码: <input type="password" name="pwd" required>
+    </p>
+    <p>
+<!-- 单选框标签
+       type="radio"
+       value=单选框的值
+       name=组
+-->
+        性别:
+        <input type="radio" value="boy" name="sex">male
+        <input type="radio" value="girl" name="sex" checked>femal
+        <hr>
+        <input type="radio" value="boy" >male
+        <input type="radio" value="girl" >femal
+        <hr>
+        <input type="radio" value="boy" name="sex1">male
+        <input type="radio" value="girl" name="sex2">femal
+
+    </p>
+<!--多选框
+    type="checkbox" value="sleep" name="hobby"
+    checked 默认选中
+-->
+    <p>爱好：
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>代码
+        <input type="checkbox" value="sex" name="hobby">fc
+        <input type="checkbox" value="work" name="hobby">工作
+    </p>
+<!--按钮-->
+    <p>
+        <input type="submit">
+        <input type="reset" disabled>
+    </p>
+    <p>
+        <input type="button" value="btn1" name="按钮">
+        <input type="image" src="../recourse/image/1.jpg">
+        <!--类似submit的功能-->
+    </p>
+<!--
+文件域
+-->
+    <p>
+        <input type="file" name="file">
+    </p>
+<!--
+邮箱验证
+-->
+    <p>email:
+        <input type="email" name="email">
+    </p>
+    <p>diyemail:
+        <input type="text" name="diyemail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+    </p>
+<!--
+URL验证
+-->
+    <p>Url:
+        <input type="url" name="url">
+    </p>
+<!--
+数字
+-->
+    <p>number:
+        <input type="number" name="number" max="100" min="0" step="10">
+    </p>
+<!--
+滑块
+-->
+    <p>滑块:
+        <input type="range" name="range" max="100" min="0" step="10">
+    </p>
+<!--
+搜索
+-->
+    <p>search:
+        <input type="search" name="search">
+    </p>
+<!--
+文本域
+-->
+    <p>
+        <textarea name="textarea" cols="30" rows="10">text</textarea>
+    </p>
+<!--
+列表框
+-->
+    <p>国家：
+        <select name="选择国家">
+            <option value="china">中国</option>
+            <option value="US" selected>美国</option>
+            <option value="UK">英国</option>
+            <option value="India">印度</option>
+
+        </select>
+    </p>
+
+<!--
+增强鼠标功能
+通过id实现
+label for=id
+-->
+    <p>
+        <label for="mark"> click</label>
+        <input type="text" id="mark">
+    </p>
+
+
+</form>
+</body>
+</html>
